@@ -1,13 +1,7 @@
-import React from "react";
-
-function App() {
-    return (
-        <div>
-            <h1>
-                Hello world! This is the frontend of our market hub application.
-            </h1>
-        </div>
-    )
+export default function App() {
+  return (
+    <div className="bg-blue-500 text-white p-10">
+      Tailwind is working 🚀
+    </div>
+  );
 }
-
-export default App; 
