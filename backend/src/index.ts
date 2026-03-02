@@ -1,5 +1,4 @@
 import { Hono } from "hono";
-import { serve } from "@hono/node-server";
 import { cors } from "hono/cors";
 
 // Routes
@@ -14,13 +13,12 @@ import ratingRoute from "./routes/ratings";
 import couponRoute from "./routes/coupons";
 import addressRoute from "./routes/address";
 
-// Create app
 const app = new Hono();
 
 // CORS
 app.use("*", cors());
 
-// ✅ Create API group
+// API
 const api = new Hono();
 
 api.route("/users", userRoute);
@@ -34,16 +32,18 @@ api.route("/ratings", ratingRoute);
 api.route("/coupons", couponRoute);
 api.route("/addresses", addressRoute);
 
-// ✅ Global prefix
 app.route("/api", api);
 
-// Root test
-app.get("/", (c) => {
-  return c.text("🚀 Hono backend running successfully");
-});
+app.get("/", (c) => c.text("🚀 Hono backend running successfully"));
 
-// Start server
-serve({
-  fetch: app.fetch,
-  port: 3000,
-});
+// ✅ Start server ONLY in local
+if (process.env.NODE_ENV !== "production") {
+  const { serve } = await import("@hono/node-server");
+  serve({
+    fetch: app.fetch,
+    port: 3000,
+  });
+}
+
+// ✅ Export for Vercel
+export default app;
