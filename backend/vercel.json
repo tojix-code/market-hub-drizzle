@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "src/index.ts" }
+  ],
+  "functions": {
+    "src/index.ts": {
+      "runtime": "vercel-node@latest"
+    }
+  }
+}
