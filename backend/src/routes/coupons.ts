@@ -1,6 +1,6 @@
 import { Hono } from "hono";
-import { db } from "../db";
-import { coupon } from "../db/schema";
+import { db } from "../db/index.js";
+import { coupon } from "../db/schema.js";
 
 const couponRoute = new Hono();
 

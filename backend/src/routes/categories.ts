@@ -1,6 +1,6 @@
 import { Hono } from "hono";
-import { db } from "../db";
-import { category } from "../db/schema";
+import { db } from "../db/index.js";
+import { category } from "../db/schema.js";
 
 const categoryRoute = new Hono();
 

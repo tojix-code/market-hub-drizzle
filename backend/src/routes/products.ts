@@ -1,6 +1,6 @@
 import { Hono } from "hono";
-import { db } from "../db";
-import { product, category, store } from "../db/schema";
+import { db } from "../db/index.js";
+import { product, category, store } from "../db/schema.js";
 import { eq } from "drizzle-orm";
 
 const productRoute = new Hono();
