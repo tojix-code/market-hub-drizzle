@@ -1,6 +1,6 @@
 import { Hono } from "hono";
-import { db } from "../db";
-import { payment } from "../db/schema";
+import { db } from "../db/index.js";
+import { payment } from "../db/schema.js";
 import { eq } from "drizzle-orm";
 
 const paymentRoute = new Hono();
