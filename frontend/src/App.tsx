@@ -5,8 +5,8 @@ import ProductCard from "./components/ProductCard";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 
-import AdminLayout from "./components/admin/AdminLayout";
-import StoreLayout from "./components/store/StoreLayout";
+import AdminLayout from "./components/Admin/AdminLayout";
+import StoreLayout from "./components/Store/StoreLayout";
 
 
 function HomePage() {
