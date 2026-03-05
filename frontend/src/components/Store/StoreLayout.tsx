@@ -1,13 +1,10 @@
 // components/store/StoreLayout.tsx
-import React from "react";
+
+import { Outlet } from "react-router-dom";
 import StoreNavbar from "./StoreNavbar";
 import StoreSidebar from "./StoreSidebar";
 
-interface StoreLayoutProps {
-  children: React.ReactNode;
-}
-
-const StoreLayout: React.FC<StoreLayoutProps> = ({ children }) => {
+const StoreLayout = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Top Navbar */}
@@ -19,7 +16,7 @@ const StoreLayout: React.FC<StoreLayoutProps> = ({ children }) => {
 
         {/* Main Content */}
         <main className="flex-1 p-8">
-          {children}
+          <Outlet />
         </main>
       </div>
     </div>

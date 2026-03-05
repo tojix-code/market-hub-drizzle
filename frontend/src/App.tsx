@@ -42,8 +42,14 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/admin" element={<AdminLayout />} />
-      <Route path="/store" element={<StoreLayout />} />
+
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route index element={<div>Admin Dashboard</div>} />
+      </Route>
+
+      <Route path="/store" element={<StoreLayout />}>
+        <Route index element={<div>Store Dashboard</div>} />
+      </Route>
     </Routes>
   );
 }
