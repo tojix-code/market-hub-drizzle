@@ -8,6 +8,7 @@ import Hero from "./components/Hero";
 import AdminLayout from "./components/admin/AdminLayout";
 import StoreLayout from "./components/store/StoreLayout";
 
+
 function HomePage() {
   return (
     <div className="bg-gray-100 min-h-screen">
@@ -28,6 +29,7 @@ function HomePage() {
           <ProductCard />
           <ProductCard />
           <ProductCard />
+          const products = useProducts();
         </div>
       </main>
 

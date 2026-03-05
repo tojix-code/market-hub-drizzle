@@ -1,4 +1,12 @@
+import { useEffect } from "react";
+
 export default function Footer() {
+
+  // useEffect → run when Footer loads
+  useEffect(() => {
+    console.log("Footer Loaded");
+  }, []);
+
   return (
     <footer className="bg-gray-900 text-gray-300 mt-10">
       <div className="max-w-7xl mx-auto px-6 py-10 grid gap-8 md:grid-cols-4">
@@ -49,9 +57,9 @@ export default function Footer() {
             </button>
           </div>
         </div>
+
       </div>
 
-      {/* Bottom */}
       <div className="border-t border-gray-700 text-center py-4 text-sm">
         © {new Date().getFullYear()} Market Hub. All rights reserved.
       </div>
