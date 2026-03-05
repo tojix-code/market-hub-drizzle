@@ -5,8 +5,8 @@ import ProductCard from "./components/ProductCard";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 
-import AdminLayout from "./components/admin/AdminLayout.tsx";
-import StoreLayout from "./components/store/StoreLayout.tsx";
+import AdminLayout from "./components/admin/AdminLayout";
+import StoreLayout from "./components/store/StoreLayout";
 
 
 function HomePage() {
