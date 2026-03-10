@@ -8,6 +8,8 @@ import Hero from "./components/Hero";
 import AdminLayout from "./components/Admin/AdminLayout";
 import StoreLayout from "./components/Store/StoreLayout";
 
+import CategoriesMarquee from "./components/CategoriesMarquee";
+
 
 function HomePage() {
   return (
@@ -16,6 +18,8 @@ function HomePage() {
 
       <main className="flex-grow">
         <Hero />
+
+        <CategoriesMarquee /> 
 
         <div className="p-6 grid gap-6 md:grid-cols-3">
           <ProductCard />
